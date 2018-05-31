@@ -1,0 +1,29 @@
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+.app {
+    font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.contact {
+	position: relative;
+	color: silver;
+	font-weight: 200;
+	margin: 0;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	bottom: 0;
+	padding: 2rem;
+}
