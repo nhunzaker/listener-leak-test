@@ -23,7 +23,7 @@ class App extends React.Component {
 	}
 
 	handleClick = () => {
-		this.setState(() => ({ edit: !this.state.edit }))
+		this.setState(prevState => ({ edit: !prevState.edit }))
 	}
 
 	render() {
@@ -32,10 +32,16 @@ class App extends React.Component {
 				<button onClick={this.handleClick}>{this.state.edit ? 'view' : 'edit'}</button>
 				<br />
 
-				{this.state.edit ? <input /> : <p>view</p>}
+				{this.state.edit ? <Form /> : <p>view</p>}
 			</div>
 		)
 	}
 }
+
+const Form = () => (
+	<form>
+		<input />
+	</form>
+)
 
 ReactDOM.render(<App />, document.getElementById('root'))
