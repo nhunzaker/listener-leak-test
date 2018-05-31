@@ -7,7 +7,7 @@ const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development
 const isDev = mode === 'development'
 
 let config = {
-	mode: 'development',
+	mode,
 	devtool: isDev ? 'cheap-module-source-map' : false,
 	entry: ['react-hot-loader/patch', path.resolve(__dirname, 'src/index.js')],
 	output: {

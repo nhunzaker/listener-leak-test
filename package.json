@@ -1,25 +1,18 @@
 {
-  "name": "react-router-listener-bug",
+  "name": "react-listener-bug",
   "version": "0.0.1",
-  "description": "React router listener bug repro",
+  "description": "React listener bug repro",
   "main": "index.js",
   "author": "hally9k",
   "license": "MIT",
   "scripts": {
     "start": "webpack-serve ./webpack.config.js",
-    "start:prod": "webpack --watch & http-server ./dist",
+    "start:prod": "NODE_ENV=production webpack --watch & http-server ./dist",
     "build": "rm -rf ./dist/* && NODE_ENV=production webpack"
   },
   "dependencies": {
-    "history": "^4.7.2",
-    "immutable": "^3.8.2",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2",
-    "redux-logger": "^3.0.6",
-    "reselect": "^3.0.1"
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -35,8 +28,6 @@
     "koa-connect": "^2.0.1",
     "koa-router": "^7.4.0",
     "node-sass": "^4.8.3",
-    "react-hot-loader": "^4.1.1",
-    "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.20.3",
     "webpack": "^4.0.1",
