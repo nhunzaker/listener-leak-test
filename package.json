@@ -1,13 +1,13 @@
 {
-  "name": "react-listener-bug",
+  "name": "listener-leak-test",
   "version": "0.0.1",
-  "description": "React listener bug repro",
+  "description": "Listener leak repro",
   "main": "index.js",
   "author": "hally9k",
   "license": "MIT",
   "scripts": {
     "start": "webpack-serve ./webpack.config.js",
-    "start:prod": "NODE_ENV=production webpack --watch & http-server ./dist",
+    "start:prod": "yarn build & http-server ./dist",
     "build": "rm -rf ./dist/* && NODE_ENV=production webpack"
   },
   "dependencies": {
@@ -21,15 +21,8 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.0.4",
-    "http-proxy-middleware": "^0.18.0",
     "http-server": "^0.11.1",
-    "koa-connect": "^2.0.1",
-    "koa-router": "^7.4.0",
-    "node-sass": "^4.8.3",
-    "sass-loader": "^7.0.1",
-    "style-loader": "^0.20.3",
     "webpack": "^4.0.1",
     "webpack-serve": "^0.1.5"
   }

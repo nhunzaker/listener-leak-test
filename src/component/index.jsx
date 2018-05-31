@@ -14,8 +14,6 @@ export default class Root extends React.Component {
 	}
 
 	render() {
-		const { routeTo } = this.props
-
 		return (
 			<div>
 				<button onClick={this.handleClick}>{this.state.edit ? 'view' : 'edit'}</button>
