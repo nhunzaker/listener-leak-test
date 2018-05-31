@@ -1,3 +1,8 @@
+## Event listener accumulation reproduction
+
+`yarn start` to serve dev build on localhost
+`yarn start:prod` to build for production and serve on localhost
+
 ### To reproduce event listener leak:
 
 1. Open dev tools and enter the performance tab.
