@@ -18,13 +18,18 @@ class App extends React.Component {
 		super()
 
 		this.state = {
-			edit: false
+			edit: false,
+      revision: 0
 		}
 	}
 
 	handleClick = () => {
 		this.setState(prevState => ({ edit: !prevState.edit }))
 	}
+
+  flush = () => {
+    this.setState(state => ({ revision: state.revision + 1 }))
+  }
 
 	render() {
 		return (
@@ -33,6 +38,8 @@ class App extends React.Component {
 				<br />
 
 				{this.state.edit ? <Form /> : <p>view</p>}
+
+				<button onClick={this.flush}>Flush Fiber</button>
 			</div>
 		)
 	}
