@@ -11,8 +11,8 @@
     "build": "rm -rf ./dist/* && NODE_ENV=production webpack"
   },
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "preact": "^8.2.9",
+    "preact-compat": "^3.18.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

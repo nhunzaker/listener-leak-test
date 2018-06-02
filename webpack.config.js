@@ -30,7 +30,11 @@ let config = {
 	],
 	resolve: {
 		extensions: ['.js', '.jsx'],
-		modules: ['node_modules', 'src']
+		modules: ['node_modules', 'src'],
+		alias: {
+			react: 'preact-compat',
+			'react-dom': 'preact-compat'
+		}
 	},
 	optimization: {
 		minimize: !isDev,
